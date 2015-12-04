@@ -1,0 +1,58 @@
+Contents
+--------
+
+   README
+
+   Makefile
+
+   global.h        Global defines
+   block.*         Disk block abstraction
+   disksystem.*    Simulated disk system with a few extra components
+   buffercache.*   LRU buffercache implementation
+
+   btree.h         The required B-Tree interface
+   btree.cc        The btree implementation that you will write
+                   The handout version contains only stubs
+
+   btree_ds.h
+   btree_ds.cc     An implementation of the basic BTree data
+                   structures, which you are welcome to use
+
+   makedisk.cc
+   infodisk.cc
+   readdisk.cc
+   writedisk.cc    Tools to create, examine, read, and write virtual
+                   disk systems - no allocation is done
+
+
+   freebuffer,cc
+   readbuffer.cc
+   writebuffer.cc  Tools to read and write virtual disk systems
+                   using a buffer cache.  The results should be
+                   identical to read and writedisk.cc
+                   allocation is done here
+
+   btree_init.cc   Initialize the btree structure (like format)
+   btree_insert.cc Insert a key,value pair into the btree
+   btree_delete.cc Delete a key, value pair from the btree
+   btree_update.cc Update a key, value pair in the btree
+   btree_lookup.cc Query for the value associated with a tree
+   btree_show.cc   Display the btree as (key,value) pairs sorted in key order
+   btree_sane.cc   Sanity Check the btree
+
+
+   sim.cc          Simulator used to test performance and correctness
+                   of btree implementation
+
+   ref_impl.pl     Reference implementation in Perl for comparison
+                   This is correct (when run with bug probability 0)
+
+   test_me.pl      Test the student's implementation (using sim)
+
+   test.pl         Test two implementations against each other
+   gen_test_sequence.pl
+                   Generate a sequence of operations for use in testing
+   compare.pl      Compare two outputs resulting from the same test sequence
+
+
+

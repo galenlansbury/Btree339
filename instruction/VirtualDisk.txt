@@ -1,0 +1,32 @@
+Installing Btree Lab
+--------------------
+
+cd your_projects_directory
+tar xvfz btree_lab.tgz
+cd btree_lab
+touch .dependencies
+make depend
+make clean
+make
+chmod 755 *.pl
+
+
+Virtual Disk
+-------------
+
+./makedisk __test 1024 1024 1 16 64 100 10 .28
+./gen_test_sequence.pl 4 4 0 50 < testinput.input
+ ./sim __test 10 < testinput.input 
+
+
+
+This will create a disk which has 1024 blocks, each of length 1024
+bytes.  The disk has a single head, and each track has 16 blocks,
+leading to 64 blocks total.  The disk has an average seek time of 100
+ms, a track-to-track seek time of 10 ms, and a rotational latency of
+0.28 ms (it spins at 3600 RPM).  This is for a circa 1979 disk.
+
+TESTING
+___________________
+
+./test_me.pl 4 4 0 200
